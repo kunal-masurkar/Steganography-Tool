@@ -30,7 +30,7 @@ A **Python application with a graphical user interface (GUI)** to **hide (embed)
 2. 🧰 Install the required dependencies:
 
    ```bash
-   pip install pillow numpy soundfile sounddevice
+   pip install -r requirements.txt
    ```
 
 ---
