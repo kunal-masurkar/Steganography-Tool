@@ -20,7 +20,7 @@ def hide_text_in_image(image_path, text, output_path):
         raise ValueError('Text is too long to hide in this image.')
     
     for i in range(len(binary_text)):
-        flat_data[i] = (flat_data[i] & ~1) | int(binary_text[i])
+        flat_data[i] = (flat_data[i] & 0xFE) | int(binary_text[i])
     
     new_data = flat_data.reshape(data.shape)
     new_img = Image.fromarray(new_data.astype('uint8'), 'RGB')
